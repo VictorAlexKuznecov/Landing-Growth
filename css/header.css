@@ -1,0 +1,217 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0D0D11;
+    z-index: 5;
+}
+
+.header__body {
+    display: flex;
+    column-gap: 35px;
+    min-height: 116px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.header__logo {
+    width: 147.36px;
+    height: 40px;
+}
+.header__button,
+.header__cart,
+.header__logo {
+    position: relative;
+    z-index: 5;
+}
+.logo {
+}
+.logo__link {
+}
+.logo__image {
+    
+}
+
+.header__menu {
+    flex: 1 1 auto;
+}
+
+.menu {
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 35px;
+    row-gap: 3px;
+}
+@media (max-width: 991.98px) {
+    .header__body,
+    .menu__list {
+        column-gap: 25px;
+    }
+}
+.menu__item {
+}
+
+.menu__link {
+    display: block;
+    line-height: 1.62; /* 26px/16 */
+    color: #FFFFFF;
+    transition: 0.3s ease 0s;
+}
+.menu__link:hover {
+    color: #13b61b;
+    text-decoration: underline;
+}
+.header__button {
+}
+.header__cart {
+    
+}
+.cart-header {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: #FFFFFF;
+}
+.cart-header__text {
+    font-size: 18px;
+    line-height: 1.55; /* 28/18 */ 
+}
+.cart-header__quatity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background: rgba(129, 129, 139, 0.3);
+    border-radius: 29.9375px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1; /* 14/14 */
+}
+
+.header__button {
+}
+.button {
+}
+.button__link {
+}
+@media (max-width: 991.98px) {
+    .header__body,
+    .menu__list {
+        column-gap: 25px;
+    }
+    .header__body {
+        min-height: 90px;
+    }
+}
+.icon-menu {
+    display: none;
+}
+@media (max-width: 767.98px) {
+    .header__body,
+    .menu__list {
+        column-gap: 15px;
+    }
+    .icon-menu {
+        background-color: #0D0D11;
+        display: block;
+        flex: 0 0 30px;
+        height: 18px;
+        position: relative;
+        z-index: 5;
+    }
+    .icon-menu span,
+    .icon-menu::before,
+    .icon-menu::after {
+        content: '';
+        right: 0;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+    }
+    .icon-menu::before {
+        top: 0;
+    }
+    .icon-menu::after {
+        bottom: 0;
+    }
+    .icon-menu span {
+       top : calc(50% - 1px);
+    }
+    .menu-open .icon-menu span {
+        width: 0;
+    }
+    .menu-open .icon-menu::before {
+        transition: all .3s ease 0s;
+        top: calc(50% - 1px);
+        transform: rotate(-45deg);
+    }
+    .menu-open .icon-menu::after {
+        transition: all .3s ease 0s;
+        bottom: calc(50% - 1px);
+        transform: rotate(45deg);
+    }
+    .menu__body {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        left: -100%;
+        top: 0;
+        padding: 100px 15px 30px;
+        overflow: auto;
+        transition: left .3s ease 0s;
+    }
+    .menu__body::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        background-color: #000;
+        left: -100%;
+        top: 0;
+        z-index: 2;
+        transition: left .3s ease 0s;
+    }
+    .menu__list {
+        row-gap: 10px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .menu__list {
+        font-size: 24px;
+    }
+    .header__body {
+        min-height: 70px;
+    }
+}
+.menu-open .menu__body,
+.menu-open .menu__body::before {
+    left: 0;
+}
+
+@media (max-width: 560px) {
+    .header__logo {
+        width: 42px;
+        overflow: hidden;
+    }
+    .cart-header__text {
+        display: none;
+    }
+    .cart-header__quatity {
+        width: 30px;
+        height: 40px;
+        background: url('../img/header/shop.svg') -3px / 36px no-repeat;
+        border-radius: 0px;
+        padding-top: 2px;
+    }
+    .header .__container {
+        padding: 0px 10px;
+    }
+}

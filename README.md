@@ -1,1 +1,1 @@
-https://VictorAlexKuznecov.github.io/Landing-Growth/
+https://VictorAlexKuznecov.github.io/Landing-Growth/index.html
